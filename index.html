@@ -5,58 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecommerce Website UI</title>
 
-    <link rel="stylesheet" href="./scss/app.css">
-    <link rel="icon" sizes="32x32" href="./img/Group 56.png">
+    <link rel="stylesheet" href="./scss/app.css" />
+    <link rel="icon" sizes="32x32" href="./img/Group 56.png" />
   </head>
   <body>
     <div class="wrapper">
       <div class="wapper-inner">
-
         <aside class="sidebar">
           <a href="#" class="logo-link">
-            <img src="./img/Group 1.svg" alt="logo-caped">
+            <img src="./img/Group 1.svg" alt="logo-caped" />
           </a>
+
           <h2 class="heading">Explore</h2>
           <div class="nav">
             <a href="" class="nav-item">
-              <img src="./img/image 15.svg" alt="" class="icon">
+              <img src="./img/image 15.svg" alt="" class="icon" />
               New In
             </a>
             <a href="" class="nav-item">
-              <img src="./img/image 9.svg" alt="" class="icon">
+              <img src="./img/image 9.svg" alt="" class="icon" />
               Clothing
             </a>
             <a href="" class="nav-item">
-              <img src="./img/image 8.svg" alt="" class="icon">
+              <img src="./img/image 8.svg" alt="" class="icon" />
               Shoes
             </a>
             <a href="" class="nav-item">
-              <img src="./img/image 7.svg" alt="" class="icon">
+              <img src="./img/image 7.svg" alt="" class="icon" />
               Accessories
             </a>
             <a href="" class="nav-item">
-              <img src="./img/image 6.svg" alt="" class="icon">
+              <img src="./img/image 6.svg" alt="" class="icon" />
               Activewear
             </a>
             <a href="" class="nav-item">
-              <img src="./img/image 4.svg" alt="" class="icon">
+              <img src="./img/image 4.svg" alt="" class="icon" />
               Gifts & Living
             </a>
             <a href="" class="nav-item">
-              <img src="./img/image 5.svg" alt="" class="icon">
+              <img src="./img/image 5.svg" alt="" class="icon" />
               Inspiration
-            </a>           
+            </a>
           </div>
 
           <button class="chat-btn">
             <span class="icon">
-              <img src="./img/Vector.svg" alt="">
+              <img src="./img/Vector.svg" alt="" />
             </span>
             Help Center
           </button>
         </aside>
-  
+
         <header class="header">
+          <a href="#" class="logo-link">
+            <img src="./img/Group 1.svg" alt="logo-caped" />
+          </a>
+
           <form action="" class="search-form">
             <img src="./img/search.svg" alt="" class="icon" />
             <input type="search" class="search" placeholder="Search store" />
@@ -71,35 +75,57 @@
 
           <div class="actions">
             <a href="" class="action-link">
-              <img src="./img/basket.svg" alt="" class="action-icon">
+              <img src="./img/basket.svg" alt="" class="action-icon" />
             </a>
             <a href="" class="action-link">
-              <img src="./img/person.svg" alt="" class="action-icon">
+              <img src="./img/person.svg" alt="" class="action-icon" />
             </a>
           </div>
         </header>
-  
+
         <!-- Main -->
         <main>
-          <div class="wide"><img src="./img/W1.jpg" alt=""></div>
-          <div class="tall"><img src="./img/W7.jpg" alt=""></div>
-          <div class="wide"><img src="./img/W2.jpg" alt=""></div>
-          <div class="tall"><img src="./img/W8.jpg" alt=""></div>
-          <div class="tall"><img src="./img/W3.jpg" alt=""></div>
-          <div class="tall"><img src="./img/W4.jpg" alt=""></div>
-          <div class="wide"><img src="./img/W5.jpg" alt=""></div>
-          <div class="wide"><img src="./img/W6.jpg" alt=""></div>
+          <div class="wide"><img src="./img/W1.jpg" alt="" /></div>
+          <div class="tall"><img src="./img/W7.jpg" alt="" /></div>
+          <div class="wide"><img src="./img/W2.jpg" alt="" /></div>
+          <div class="tall"><img src="./img/W8.jpg" alt="" /></div>
+          <div class="tall"><img src="./img/W3.jpg" alt="" /></div>
+          <div class="tall"><img src="./img/W4.jpg" alt="" /></div>
+          <div class="wide"><img src="./img/W5.jpg" alt="" /></div>
+          <div class="wide"><img src="./img/W6.jpg" alt="" /></div>
         </main>
 
+        <div class="slide-column">
+          <div class="slide active">
+            <img src="./img/W1.jpg" alt="Image 1" />
+          </div>
+          <div class="slide">
+            <img src="./img/W2.jpg" alt="Image 2" />
+          </div>
+          <div class="slide">
+            <img src="./img/W5.jpg" alt="Image 3" />
+          </div>
+          <div class="slide">
+            <img src="./img/W6.jpg" alt="Image 3" />
+          </div>
+        </div>
+
+        <div class="slide-row"></div>
       </div>
     </div>
 
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      let currentSlideIndex = 0;
 
+      function showNextSlide() {
+        slides[currentSlideIndex].classList.remove("active");
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        slides[currentSlideIndex].classList.add("active");
+      }
 
-    <!-- Begin: Header -->
-    <!-- End: Header -->
-
-    <!-- Footer -->
-    <!-- End Footer -->
+      // auto slide
+      setInterval(showNextSlide, 3000);
+    </script>
   </body>
 </html>
