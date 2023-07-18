@@ -1,18 +1,5 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap");
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+@import "https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -21,9 +8,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -39,8 +24,7 @@ blockquote, q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before, blockquote:after, q:before, q:after {
   content: "";
   content: none;
 }
@@ -59,10 +43,7 @@ body {
   font-size: 1.6rem;
 }
 
-input,
-button,
-textarea,
-select {
+input, button, textarea, select {
   outline: none;
   border: none;
   font-family: inherit;
@@ -89,22 +70,25 @@ a {
   display: flex;
   flex-direction: column;
 }
+
 .sidebar .heading {
   margin-top: 60px;
   font-size: 3.1rem;
   font-weight: 800;
 }
+
 .sidebar .nav {
   display: flex;
   flex-direction: column;
   margin-top: 48px;
   row-gap: 18px;
 }
+
 .sidebar .nav .nav-item {
   display: flex;
   align-items: center;
   -moz-column-gap: 12px;
-       column-gap: 12px;
+  column-gap: 12px;
   font-size: 1.6rem;
   font-weight: 600;
   color: #000;
@@ -112,28 +96,33 @@ a {
   transition: background-color 0.5s;
   border-radius: 8px;
 }
+
 .sidebar .nav .nav-item:hover {
   background-color: #ebebeb;
   border-radius: 8px;
 }
+
 .sidebar .nav .nav-item .icon {
   width: 22px;
   height: 22px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
+
 .sidebar .chat-btn {
+  position: -webkit-sticky;
   position: sticky;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   display: flex;
   align-items: center;
   -moz-column-gap: 18px;
-       column-gap: 18px;
+  column-gap: 18px;
   font-size: 1.6rem;
   font-weight: 600;
   margin-top: auto;
   cursor: pointer;
 }
+
 .sidebar .chat-btn .icon {
   display: flex;
   align-items: center;
@@ -150,33 +139,40 @@ a {
   align-items: center;
   margin: 47px 0;
 }
+
 .header .logo-link {
   display: none;
 }
+
 .header .search-form {
   display: flex;
   align-items: center;
   -moz-column-gap: 18px;
-       column-gap: 18px;
+  column-gap: 18px;
   font-weight: 600;
   margin-right: auto;
 }
+
 .header .search-form .search {
   background: #fff;
   font-size: 1.8rem;
   font-weight: 600;
 }
+
 .header .search-form .search::-moz-placeholder {
   color: rgba(0, 0, 0, 0.7);
 }
+
 .header .search-form .search::placeholder {
   color: rgba(0, 0, 0, 0.7);
 }
+
 .header .nav {
   display: flex;
   -moz-column-gap: 46px;
-       column-gap: 46px;
+  column-gap: 46px;
 }
+
 .header .nav .nav-link {
   position: relative;
   color: #000;
@@ -184,6 +180,7 @@ a {
   font-weight: 600;
   padding: 8px 0;
 }
+
 .header .nav .nav-link::after {
   content: "";
   position: absolute;
@@ -194,15 +191,17 @@ a {
   height: 3px;
   transition: width 0.5s;
 }
+
 .header .nav .nav-link:hover::after, .header .nav .nav-link.active::after {
   width: 100%;
 }
+
 .header .actions {
   display: flex;
   align-items: center;
   margin-left: 50px;
   -moz-column-gap: 26px;
-       column-gap: 26px;
+  column-gap: 26px;
 }
 
 main {
@@ -212,20 +211,22 @@ main {
   grid-auto-flow: dense;
   gap: 22px;
 }
+
 main .wide {
   grid-column: span 2;
 }
+
 main .tall {
   grid-row: span 2;
 }
+
 main img {
   width: 100%;
   height: 100%;
   border-radius: 16px;
 }
 
-.slide-column,
-.slide-row {
+.slide-column, .slide-row {
   display: none;
 }
 
@@ -237,6 +238,7 @@ main img {
   }
   .wapper-inner {
     max-width: 992px;
+    display: grid;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.6fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -260,7 +262,7 @@ main img {
   }
   .header .nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -281,32 +283,18 @@ main img {
     display: none;
   }
   .sidebar .heading {
+    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     margin-top: 0;
   }
   .sidebar .nav {
-    background-color: #e6e6e6;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 530px;
     margin-top: 0;
     justify-content: space-between;
-  }
-  .sidebar .nav .nav-link {
-    position: relative;
-    padding: 20px;
-  }
-  .sidebar .nav .nav-link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    background: #000;
-    height: 3px;
-    transition: width 0.5s;
   }
   .sidebar .chat-btn {
     display: none;
@@ -315,7 +303,7 @@ main img {
     grid-area: slide-column;
     display: block;
     width: 100%;
-    max-width: 916px; /* Điều chỉnh kích thước của slider tại đây */
+    max-width: 916px;
     margin: 50px auto;
     overflow: hidden;
     position: relative;
@@ -344,6 +332,17 @@ main img {
     display: none;
   }
 }
+@-webkit-keyframes slideAnimation {
+  0%, 100% {
+    opacity: 0;
+  }
+  16.66%, 33.33% {
+    opacity: 1;
+  }
+  49.99%, 66.66% {
+    opacity: 0;
+  }
+}
 @keyframes slideAnimation {
   0%, 100% {
     opacity: 0;
@@ -354,4 +353,7 @@ main img {
   49.99%, 66.66% {
     opacity: 0;
   }
-}/*# sourceMappingURL=app.css.map */
+}
+
+
+/*# sourceMappingURL=app.min.css.map */
