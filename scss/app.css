@@ -294,6 +294,9 @@ main img {
     margin-top: 0;
     justify-content: space-between;
   }
+  .sidebar .nav .nav-item {
+    background-color: rgba(223, 200, 200, 0.6156862745);
+  }
   .sidebar .nav .nav-link {
     position: relative;
     padding: 20px;
@@ -337,8 +340,11 @@ main img {
     opacity: 1;
   }
   .slide-row {
+    padding: 0 38px;
     grid-area: slide-row;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
   }
   main {
     display: none;

@@ -267,6 +267,9 @@ main {
       max-width: 530px;
       margin-top: 0;
       justify-content: space-between;
+      .nav-item{
+        background-color: #dfc8c89d;
+      }
 
       .nav-link {
         position: relative;
@@ -316,8 +319,11 @@ main {
   }
 
   .slide-row {
+    padding: 0 38px;
     grid-area: slide-row;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
   }
 
   main {
